@@ -1,25 +1,21 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="JH">
+  <meta name="keywords" content="">
+  
     <meta name="description" content="IO学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javaIO学习">
@@ -44,209 +40,259 @@
 <meta property="article:author" content="JH">
 <meta property="article:tag" content="java">
 <meta property="article:tag" content="io">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200229183652880.png">
+  
+  
+  
+  <title>javaIO学习 - 日常博客记录</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
-<link rel="canonical" href="http://example.com/2022/07/25/javaIO%E5%AD%A6%E4%B9%A0/">
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/07/25/javaIO%E5%AD%A6%E4%B9%A0/","path":"2022/07/25/javaIO学习/","title":"javaIO学习"}</script>
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
 
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>javaIO学习 | 日常博客记录</title>
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
 
 
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
 
-  <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
-  </div>
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
 
-  <div class="site-meta">
 
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">日常博客记录</p>
-      <i class="logo-line"></i>
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>JH的博客</strong>
     </a>
-      <p class="site-subtitle" itemprop="description">hexo建站支持</p>
-  </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-</div>
-
-
-
-<nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
-  </ul>
 </nav>
 
-
-
-
-</div>
-        
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/wallhaven-2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="javaIO学习"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-07-25 09:40" pubdate>
+          2022年7月25日 上午
+        </time>
+      </span>
+    
   </div>
 
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IO%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.</span> <span class="nav-text">IO学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">1 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-IO%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 IO基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1-%E7%94%A8%E6%88%B7%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%86%85%E6%A0%B8%E7%A9%BA%E9%97%B4"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">1.1.1 用户空间与内核空间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-2-%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">1.1.2 同步异步</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.1.1.2.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-3-%E9%98%BB%E5%A1%9E%E9%9D%9E%E9%98%BB%E5%A1%9E"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">1.1.3 阻塞非阻塞</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-1"><span class="nav-number">1.1.1.3.1.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E4%BA%94%E7%A7%8DIO%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2   五种IO模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-%E9%98%BB%E5%A1%9EIO%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">1.2.1 阻塞IO模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2-%E9%9D%9E%E9%98%BB%E5%A1%9EIO%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">1.2.2 非阻塞IO模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-3-IO%E5%A4%8D%E7%94%A8%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">1.2.3 IO复用模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-4-%E4%BF%A1%E5%8F%B7%E9%A9%B1%E5%8A%A8IO%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">1.2.4 信号驱动IO模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-5-%E5%BC%82%E6%AD%A5IO%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.2.5.</span> <span class="nav-text">1.2.5 异步IO模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-6-%E5%8C%BA%E5%88%AB"><span class="nav-number">1.1.2.6.</span> <span class="nav-text">1.2.6 区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-BIO-%E5%90%8C%E6%AD%A5%E9%98%BB%E5%A1%9EIO"><span class="nav-number">1.2.</span> <span class="nav-text">1 BIO 同步阻塞IO</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E4%BC%A0%E7%BB%9FBIO"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.1 传统BIO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E4%BC%AA%E5%BC%82%E6%AD%A5IO"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2 伪异步IO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.2.3.</span> <span class="nav-text">1.3 代码示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">客户端</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">服务端</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-%E6%80%BB%E7%BB%93"><span class="nav-number">1.2.4.</span> <span class="nav-text">1.4 总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-NIO-%EF%BC%88New-IO%EF%BC%89"><span class="nav-number">1.3.</span> <span class="nav-text">2 NIO （New IO）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-NIO%E7%AE%80%E4%BB%8B"><span class="nav-number">1.3.1.</span> <span class="nav-text">2.1 NIO简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-NIO%E7%89%B9%E6%80%A7-NIO%E4%B8%8EIO%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.3.2.</span> <span class="nav-text">2.2 NIO特性 NIO与IO的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%9E%E9%98%BB%E5%A1%9EIO"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">非阻塞IO</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%93%E5%86%B2%E5%8C%BABuffer"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">缓冲区Buffer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E9%81%93Channel"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">通道Channel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8Selector"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">选择器Selector</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-NIO%E8%AF%BB%E6%95%B0%E6%8D%AE%E5%92%8C%E5%86%99%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="nav-number">1.3.3.</span> <span class="nav-text">2.3 NIO读数据和写数据的方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-NIO%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6"><span class="nav-number">1.3.4.</span> <span class="nav-text">2.4 NIO核心组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.3.5.</span> <span class="nav-text">2.5 代码示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF-1"><span class="nav-number">1.3.5.1.</span> <span class="nav-text">服务端</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-AIO-Asynchronous-I-O"><span class="nav-number">1.4.</span> <span class="nav-text">3. AIO (Asynchronous I&#x2F;O)</span></a></li></ol></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">JH</p>
-  <div class="site-description" itemprop="description">记录常见算法与日常笔记</div>
-</div>
-<div class="site-state-wrap site-overview-item animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-          <a href="/categories/">
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-          <a href="/tags/">
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-
-
-
-        </div>
-      </div>
-    </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
+  <div class="mt-1">
+    
 
     
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          86 分钟
+        
+      </span>
+    
+
+    
+    
   </div>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+        
+      </div>
 
-    <div class="main-inner post posts-expand">
+      
+    </div>
+  </div>
+</div>
 
+</div>
 
-  
+  </header>
 
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/25/javaIO%E5%AD%A6%E4%B9%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="JH">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="日常博客记录">
-      <meta itemprop="description" content="记录常见算法与日常笔记">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="javaIO学习 | 日常博客记录">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          javaIO学习
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
+  <main>
+    
       
 
-      <time title="创建时间：2022-07-25 09:40:21 / 修改时间：10:05:51" itemprop="dateCreated datePublished" datetime="2022-07-25T09:40:21+08:00">2022-07-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
-        </span>
-    </span>
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
 
-  
-</div>
+    </div>
 
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <h1 id="IO学习"><a href="#IO学习" class="headerlink" title="IO学习"></a>IO学习</h1><span id="more"></span>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">javaIO学习</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="IO学习"><a href="#IO学习" class="headerlink" title="IO学习"></a>IO学习</h1><span id="more"></span>
 
 <h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h2><p>Java 中的 BIO、NIO和 AIO 理解为是 <strong>Java 语言对操作系统的各种 IO 模型的封装</strong>。程序员在使用这些 API 的时候，不需要<strong>关心操作系统层面的知识</strong>，也不需要根据不同操作系统编写不同的代码。只需要使用Java的API就可以了。</p>
 <h3 id="1-1-IO基础知识"><a href="#1-1-IO基础知识" class="headerlink" title="1.1 IO基础知识"></a>1.1 IO基础知识</h3><p><strong>IO</strong> (Input/Output,输入/输出)即<strong>数据的读取(接收)或写入(发送)操作</strong>，通常用户进程中的一个<strong>完整IO</strong>分为两阶段:<strong>用户进程空间&lt;–&gt;内核空间</strong>、<strong>内核空间&lt;–&gt;设备空间</strong>(磁盘、网络等)。IO有内存IO、网络IO和磁盘IO三种,通常我们说的IO指的是后两者。</p>
@@ -258,7 +304,7 @@
 <blockquote>
 <p>流是什么？可以把流想象成一个水管，数据就是水管里的水，但是只能单向流动。Input Stream就是数据从外面（磁盘、网络）流进存，Output Stream就是数据从内存流到外面去。<strong>对于浏览网页来说，浏览器和腾讯服务器之间至少需要建立两根水管</strong>，才可以既能发数据，又能收数据。</p>
 </blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20200229183652880.png" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200229183652880.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
 <p>LINUX中<strong>进程无法直接操作I/O设备</strong>，其必须通过<strong>系统调用</strong>请求kernel来协助完成<strong>I/O动作</strong>；内核会为每个I/O设备维护一个缓冲区。</p>
 <p>对于一个输入操作来说，进程IO系统调用后，内核会<strong>先看缓冲区中有没有相应的缓存数据</strong>，<strong>没有</strong>的话再到<strong>设备中读取</strong>,因为设备IO一般速度较慢，需要等待；内核缓冲区有数据则直接复制到进程空间。</p>
 <p>所以，对于一个网络输入操作通常包括两个不同阶段:</p>
@@ -297,16 +343,16 @@
 <p><strong>阻塞指的是调用方一直等待，别的事情什么都不做。</strong></p>
 <p><strong>非阻塞指的是调用方先去忙别的事情。</strong></p>
 <h3 id="1-2-五种IO模型"><a href="#1-2-五种IO模型" class="headerlink" title="1.2   五种IO模型"></a>1.2   五种IO模型</h3><h4 id="1-2-1-阻塞IO模型"><a href="#1-2-1-阻塞IO模型" class="headerlink" title="1.2.1 阻塞IO模型"></a>1.2.1 阻塞IO模型</h4><p>当<strong>用户线程发出IO请求</strong>之后，内核会去查看<strong>数据是否就绪</strong>，如果没有就绪就会<strong>等待数据就绪</strong>，而<strong>用户线程</strong>就会处于<strong>阻塞状态</strong>，用户线程交出CPU。当数据就绪之后，内核会将数据拷贝到用户线程，并返回结果给用户线程，用户线程才解除block状态。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200229200534398.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc3NTk2Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200229200534398.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc3NTk2Mw==,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
 <p><strong>进程发起IO系统调用后,进程被阻塞,转到内核空间处理,整个IO处理完毕后返回进程。操作成功则进程获取到数据</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20200229200805541.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc3NTk2Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200229200805541.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc3NTk2Mw==,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
 <h4 id="1-2-2-非阻塞IO模型"><a href="#1-2-2-非阻塞IO模型" class="headerlink" title="1.2.2 非阻塞IO模型"></a>1.2.2 非阻塞IO模型</h4><p>进程发起IO<strong>系统调用</strong>后,如果内核缓冲区没有数据,<strong>需要到IO设备中读取，进程返回一个错误</strong>而不会被阻塞;进程发起IO系统调用后，如果内核<strong>缓冲区有数据</strong>，内核就会把<strong>数据返回给进程</strong>。</p>
 <p>对于上面的阻塞IO模型来说，内核数据没准备好需要进程阻塞的时候，就返回一个错误,以使得进程不被阻塞。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200229201122343.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc3NTk2Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200229201122343.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc3NTk2Mw==,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
 <p><strong>在非阻塞IO模型中，用户线程需要不断地询问内核数据是否就绪，也就说非阻塞IO不会交出CPU，而会一直占用CPU。</strong></p>
 <h4 id="1-2-3-IO复用模型"><a href="#1-2-3-IO复用模型" class="headerlink" title="1.2.3 IO复用模型"></a>1.2.3 IO复用模型</h4><p><strong>多个的进程的IO可以注册到一个复用器(select)上，然后用一个进程调用该select,，select会监听所有注册进来的IO。</strong></p>
 <p>如果<strong>select监听的IO在内核缓冲区都没有可读数据</strong>，select调用进程会被<strong>阻塞</strong>；而当<strong>任一IO在内核缓冲区中有可数据时</strong>，<strong>select调用就会返回</strong>；而后<strong>select调用进程可以自己或通知另外的进程</strong>(注册进程)来<strong>再次发起读取IO，读取内核中准备好的数据</strong>。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200229201544406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc3NTk2Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200229201544406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc3NTk2Mw==,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
 <p><strong>典型应用: select、 poll、 epoll三种方案，nginx都可以选择使用这三个方案</strong></p>
 <p>select, poll和epoll</p>
 <ul>
@@ -317,27 +363,27 @@
 <p>例如：<br>1）select/poll<br>小明去火车站买票，委托黄牛,黄牛三天内买到票,然后打便所有人要买票人的电话找到小明，小明去火车站交钱领票。<br>耗费:往返车站2次,路上2小时,黄牛手续费100元，等待通知3小时</p>
 <p>2)epoll<br>小明去火车站买票，委托黄牛,黄牛买到后即通知小明去领，然后小明去火车站交钱领票。<br>耗费:往返车站2次，路上2小时,黄牛手续费100元，无需打电话</p>
 <h4 id="1-2-4-信号驱动IO模型"><a href="#1-2-4-信号驱动IO模型" class="headerlink" title="1.2.4 信号驱动IO模型"></a>1.2.4 信号驱动IO模型</h4><p>在信号驱动IO模型中，当用户线程发起一个<strong>IO请求操作</strong>，会给对应的socket<strong>注册一个信号函数</strong>，然后用户线程会继续执行，当内核数<strong>据就绪时会发送一个信号给用户线程</strong>，用户线程接收到信号之后，便在<strong>信号函数中调用IO读写操作来进行实际的IO请求操作</strong>。这个一般用于UDP中，<strong>对TCP套接口几乎是没用的，原因是该信号产生得过于频繁</strong>，并且该信号的出现并没有告诉我们发生了什么事情。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/mQlO20PgUDLJyNAPpmHXFWjrXZ2uXvSe3jGJekgJ1X4kjia7AABicVEAvNVXDQBI4o2pLW3b9EiaibiavFnTBABicUfw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/mQlO20PgUDLJyNAPpmHXFWjrXZ2uXvSe3jGJekgJ1X4kjia7AABicVEAvNVXDQBI4o2pLW3b9EiaibiavFnTBABicUfw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" srcset="/img/loading.gif" lazyload alt="图片"></p>
 <p>当进程发起一个IO操作，会向内核注册一个信号处理函数，然后进程返回不阻塞；当内核数据就绪时会发送一个信号给进程，进程便在信号处理函数中调用IO读取数据</p>
 <h4 id="1-2-5-异步IO模型"><a href="#1-2-5-异步IO模型" class="headerlink" title="1.2.5 异步IO模型"></a>1.2.5 异步IO模型</h4><p>当<strong>进程发起一个IO操作</strong>,<strong>进程返回(不阻塞),<strong>但也不能返回结果;<strong>内核把整个IO处理完</strong>后，会</strong>通知进程</strong>结果。如果IO操作成功则进程直接获取到数据。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200229202723330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc3NTk2Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200229202723330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc3NTk2Mw==,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
 <p>例如：<br>小明去火车站买票，给售票员留下电话,有票后，售票员电话遇知小明并快递送票上门。<br>耗费:往返车站1次，路上1小时,免黄牛费100元,无需打电话</p>
 <p><strong>注意：</strong><br>此模型和前面模型最大的区别是：<strong>前4个都是阻塞的</strong>，因为<strong>需要自己把用户准备好的数据，放在我的用户空间，而全异步都帮我们做好了。</strong><br>用户线程完全不需要关心实际的整个IO操作是如何进行的，只需要先发起一个请求，当接收内核返回的成功信号时表示IO操作已经完成，可以直接去使用数据了。它是最理想的模型。</p>
 <h4 id="1-2-6-区别"><a href="#1-2-6-区别" class="headerlink" title="1.2.6 区别"></a>1.2.6 区别</h4><p>同步I/O引起进程阻塞，直到I/O操作完成<br>异步I/O不会引起进程阻塞</p>
 <p>阻塞式I/O， 非阻塞I/O， I/O复用由于都导致了请求进程阻塞，所以均属于同步I/O。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200229203120783.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc3NTk2Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200229203120783.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc3NTk2Mw==,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
 <h2 id="1-BIO-同步阻塞IO"><a href="#1-BIO-同步阻塞IO" class="headerlink" title="1 BIO 同步阻塞IO"></a>1 BIO 同步阻塞IO</h2><p>同步阻塞I/O模式，数据的读取写入必须阻塞在一个线程内等待其完成。</p>
 <h3 id="1-1-传统BIO"><a href="#1-1-传统BIO" class="headerlink" title="1.1 传统BIO"></a>1.1 传统BIO</h3><p><strong>被调用者执行完才返回</strong>(同步)，<strong>调用者在返回前一直阻塞</strong>(阻塞)。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2.png" alt="传统BIO通信模型图"></p>
+<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2.png" srcset="/img/loading.gif" lazyload alt="传统BIO通信模型图"></p>
 <p>采用 <strong>BIO 通信模型</strong> 的服务端，通常由一个独立的 Acceptor 线程负责监听客户端的连接。我们一般通过在<code>while(true)</code> 循环中服务端会调用 <code>accept()</code> 方法等待接收客户端的连接的方式监听请求，请求一旦接收到一个连接请求，就可以建立通信套接字在这个通信套接字上进行读写操作，此时不能再接收其他客户端连接请求，只能等待同当前连接的客户端的操作执行完成， 不过可以通过多线程来支持多个客户端的连接，如上图所示。</p>
 <p>如果要让 <strong>BIO 通信模型</strong> 能够同时处理多个客户端请求，就必须使用多线程（主要原因是<code>socket.accept()</code>、<code>socket.read()</code>、<code>socket.write()</code> 涉及的三个主要函数都是同步阻塞的），也就是说它在接收到客户端连接请求之后为每个客户端创建一个新的线程进行链路处理，处理完成之后，通过输出流返回应答给客户端，线程销毁。这就是典型的 <strong>一请求一应答通信模型</strong> 。我们可以设想一下如果这个连接不做任何事情的话就会造成不必要的线程开销，不过可以通过 <strong>线程池机制</strong> 改善，线程池还可以让线程的创建和回收成本相对较低。使用<code>FixedThreadPool</code> 可以有效的控制了线程的最大数量，保证了系统有限的资源的控制，实现了N(客户端请求数量):M(处理客户端请求的线程数量)的伪异步I/O模型（N 可以远远大于 M），下面一节”伪异步 BIO”中会详细介绍到。</p>
 <h3 id="1-2-伪异步IO"><a href="#1-2-伪异步IO" class="headerlink" title="1.2 伪异步IO"></a>1.2 伪异步IO</h3><p>为了解决同步阻塞I/O面临的一个链路需要一个线程处理的问题，后来有人对它的线程模型进行了优化一一一后端通过一个线程池来处理多个客户端的请求接入，形成客户端个数M：线程池最大线程数N的比例关系，其中M可以远远大于N.通过线程池可以灵活地调配线程资源，设置线程的最大值，防止由于海量并发接入导致线程耗尽。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/3.png" alt="伪异步IO模型图"></p>
+<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/3.png" srcset="/img/loading.gif" lazyload alt="伪异步IO模型图"></p>
 <p>采用线程池和任务队列可以实现一种叫做伪异步的 I/O 通信框架，它的模型图如上图所示。当有新的客户端接入时，将客户端的 Socket 封装成一个Task（该任务实现java.lang.Runnable接口）投递到后端的线程池中进行处理，JDK 的线程池维护一个消息队列和 N 个活跃线程，对消息队列中的任务进行处理。由于线程池可以设置消息队列的大小和最大线程数，因此，它的资源占用是可控的，无论多少个客户端并发访问，都不会导致资源的耗尽和宕机。</p>
 <p>伪异步I/O通信框架采用了线程池实现，因此避免了为每个请求都创建一个独立线程造成的线程资源耗尽问题。不过因为它的底层仍然是同步阻塞的BIO模型，因此无法从根本上解决问题。</p>
-<h3 id="1-3-代码示例"><a href="#1-3-代码示例" class="headerlink" title="1.3 代码示例"></a>1.3 代码示例</h3><h4 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> 闪电侠</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2018年10月14日</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>:客户端</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">IOClient</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="comment">// TODO 创建多个线程，模拟多个客户端连接服务端</span></span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Thread</span>(() -&gt; &#123;</span><br><span class="line">      <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="type">Socket</span> <span class="variable">socket</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Socket</span>(<span class="string">&quot;127.0.0.1&quot;</span>, <span class="number">3333</span>);</span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">          <span class="keyword">try</span> &#123;</span><br><span class="line">            socket.getOutputStream().write((<span class="keyword">new</span> <span class="title class_">Date</span>() + <span class="string">&quot;: hello world&quot;</span>).getBytes());</span><br><span class="line">            Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">          &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;).start();</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-3-代码示例"><a href="#1-3-代码示例" class="headerlink" title="1.3 代码示例"></a>1.3 代码示例</h3><h4 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * </span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> 闪电侠</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2018年10月14日</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@Description</span>:客户端</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">IOClient</span> &#123;<br><br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>    <span class="hljs-comment">// TODO 创建多个线程，模拟多个客户端连接服务端</span><br>    <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(() -&gt; &#123;<br>      <span class="hljs-keyword">try</span> &#123;<br>        <span class="hljs-type">Socket</span> <span class="hljs-variable">socket</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Socket</span>(<span class="hljs-string">&quot;127.0.0.1&quot;</span>, <span class="hljs-number">3333</span>);<br>        <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) &#123;<br>          <span class="hljs-keyword">try</span> &#123;<br>            socket.getOutputStream().write((<span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>() + <span class="hljs-string">&quot;: hello world&quot;</span>).getBytes());<br>            Thread.sleep(<span class="hljs-number">2000</span>);<br>          &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;<br>          &#125;<br>        &#125;<br>      &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>      &#125;<br>    &#125;).start();<br><br>  &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h4 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> 闪电侠</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2018年10月14日</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 服务端</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">IOServer</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">    <span class="comment">// TODO 服务端处理客户端连接请求</span></span><br><span class="line">    <span class="type">ServerSocket</span> <span class="variable">serverSocket</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ServerSocket</span>(<span class="number">3333</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 接收到客户端连接请求之后为每个客户端创建一个新的线程进行链路处理</span></span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Thread</span>(() -&gt; &#123;</span><br><span class="line">      <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">          <span class="comment">// 阻塞方法获取新的连接</span></span><br><span class="line">          <span class="type">Socket</span> <span class="variable">socket</span> <span class="operator">=</span> serverSocket.accept();</span><br><span class="line"></span><br><span class="line">          <span class="comment">// 每一个新的连接都创建一个线程，负责读取数据</span></span><br><span class="line">          <span class="keyword">new</span> <span class="title class_">Thread</span>(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">              <span class="type">int</span> len;</span><br><span class="line">              <span class="type">byte</span>[] data = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="number">1024</span>];</span><br><span class="line">              <span class="type">InputStream</span> <span class="variable">inputStream</span> <span class="operator">=</span> socket.getInputStream();</span><br><span class="line">              <span class="comment">// 按字节流方式读取数据</span></span><br><span class="line">              <span class="keyword">while</span> ((len = inputStream.read(data)) != -<span class="number">1</span>) &#123;</span><br><span class="line">                System.out.println(<span class="keyword">new</span> <span class="title class_">String</span>(data, <span class="number">0</span>, len));</span><br><span class="line">              &#125;</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;).start();</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;).start();</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> 闪电侠</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2018年10月14日</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@Description</span>: 服务端</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">IOServer</span> &#123;<br><br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException &#123;<br>    <span class="hljs-comment">// TODO 服务端处理客户端连接请求</span><br>    <span class="hljs-type">ServerSocket</span> <span class="hljs-variable">serverSocket</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ServerSocket</span>(<span class="hljs-number">3333</span>);<br><br>    <span class="hljs-comment">// 接收到客户端连接请求之后为每个客户端创建一个新的线程进行链路处理</span><br>    <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(() -&gt; &#123;<br>      <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) &#123;<br>        <span class="hljs-keyword">try</span> &#123;<br>          <span class="hljs-comment">// 阻塞方法获取新的连接</span><br>          <span class="hljs-type">Socket</span> <span class="hljs-variable">socket</span> <span class="hljs-operator">=</span> serverSocket.accept();<br><br>          <span class="hljs-comment">// 每一个新的连接都创建一个线程，负责读取数据</span><br>          <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(() -&gt; &#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>              <span class="hljs-type">int</span> len;<br>              <span class="hljs-type">byte</span>[] data = <span class="hljs-keyword">new</span> <span class="hljs-title class_">byte</span>[<span class="hljs-number">1024</span>];<br>              <span class="hljs-type">InputStream</span> <span class="hljs-variable">inputStream</span> <span class="hljs-operator">=</span> socket.getInputStream();<br>              <span class="hljs-comment">// 按字节流方式读取数据</span><br>              <span class="hljs-keyword">while</span> ((len = inputStream.read(data)) != -<span class="hljs-number">1</span>) &#123;<br>                System.out.println(<span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(data, <span class="hljs-number">0</span>, len));<br>              &#125;<br>            &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>            &#125;<br>          &#125;).start();<br><br>        &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>        &#125;<br><br>      &#125;<br>    &#125;).start();<br><br>  &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h3 id="1-4-总结"><a href="#1-4-总结" class="headerlink" title="1.4 总结"></a><a target="_blank" rel="noopener" href="https://snailclimb.gitee.io/javaguide/#/docs/java/basis/BIO,NIO,AIO%E6%80%BB%E7%BB%93?id=_14-%E6%80%BB%E7%BB%93">1.4 总结</a></h3><p>在活动连接数不是特别高（小于单机1000）的情况下，这种模型是比较不错的，可以让每一个连接专注于自己的 I/O 并且编程模型简单，也不用过多考虑系统的过载、限流等问题。线程池本身就是一个天然的漏斗，可以缓冲一些系统处理不了的连接或请求。但是，当面对十万甚至百万级连接的时候，传统的 BIO 模型是无能为力的。因此，我们需要一种更高效的 I/O 处理模型来应对更高的并发量。</p>
 <h2 id="2-NIO-（New-IO）"><a href="#2-NIO-（New-IO）" class="headerlink" title="2 NIO （New IO）"></a>2 NIO （New IO）</h2><h3 id="2-1-NIO简介"><a href="#2-1-NIO简介" class="headerlink" title="2.1 NIO简介"></a>2.1 NIO简介</h3><p>NIO是一种<strong>同步非阻塞的I/O模型</strong>，在Java 1.4 中引入了 NIO 框架，对应 java.nio 包，提供了 Channel , Selector，Buffer等抽象。</p>
@@ -355,14 +401,14 @@
 <p>通道是双向的，可读也可写，而流的读写是单向的。无论读写，通道只能和Buffer交互。因为 Buffer，通道可以异步地读写。</p>
 <h4 id="选择器Selector"><a href="#选择器Selector" class="headerlink" title="选择器Selector"></a>选择器Selector</h4><p>NIO有选择器，而IO没有。</p>
 <p>选择器用于使用单个线程处理多个通道。因此，它需要较少的线程来处理这些通道。线程之间的切换对于操作系统来说是昂贵的。 因此，为了提高系统效率选择器是有用的。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-2/Slector.png" alt="一个单线程中Selector维护3个Channel的示意图"></p>
+<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-2/Slector.png" srcset="/img/loading.gif" lazyload alt="一个单线程中Selector维护3个Channel的示意图"></p>
 <h3 id="2-3-NIO读数据和写数据的方式"><a href="#2-3-NIO读数据和写数据的方式" class="headerlink" title="2.3 NIO读数据和写数据的方式"></a>2.3 NIO读数据和写数据的方式</h3><p>通常来说NIO中的所有IO都是从 Channel（通道） 开始的。</p>
 <ul>
 <li>从通道进行数据读取 ：创建一个缓冲区，然后请求通道读取数据。</li>
 <li>从通道进行数据写入 ：创建一个缓冲区，填充数据，并要求通道写入数据。</li>
 </ul>
 <p>数据读取和写入操作图示：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-2/NIO%E8%AF%BB%E5%86%99%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E5%BC%8F.png" alt="NIO读写数据的方式"></p>
+<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-2/NIO%E8%AF%BB%E5%86%99%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E5%BC%8F.png" srcset="/img/loading.gif" lazyload alt="NIO读写数据的方式"></p>
 <h3 id="2-4-NIO核心组件"><a href="#2-4-NIO核心组件" class="headerlink" title="2.4 NIO核心组件"></a>2.4 NIO核心组件</h3><p>NIO 包含下面几个核心的组件：</p>
 <ul>
 <li>Channel(通道)</li>
@@ -370,7 +416,7 @@
 <li>Selector(选择器)</li>
 </ul>
 <h3 id="2-5-代码示例"><a href="#2-5-代码示例" class="headerlink" title="2.5 代码示例"></a>2.5 代码示例</h3><p>客户端代码不变。</p>
-<h4 id="服务端-1"><a href="#服务端-1" class="headerlink" title="服务端"></a>服务端</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> 闪电侠</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019年2月21日</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: NIO 改造后的服务端</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">NIOServer</span> &#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">    <span class="comment">// 1. serverSelector负责轮询是否有新的连接，服务端监测到新的连接之后，不再创建一个新的线程，</span></span><br><span class="line">    <span class="comment">// 而是直接将新连接绑定到clientSelector上，这样就不用 IO 模型中 1w 个 while 循环在死等</span></span><br><span class="line">    <span class="type">Selector</span> <span class="variable">serverSelector</span> <span class="operator">=</span> Selector.open();</span><br><span class="line">    <span class="comment">// 2. clientSelector负责轮询连接是否有数据可读</span></span><br><span class="line">    <span class="type">Selector</span> <span class="variable">clientSelector</span> <span class="operator">=</span> Selector.open();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Thread</span>(() -&gt; &#123;</span><br><span class="line">      <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// 对应IO编程中服务端启动</span></span><br><span class="line">        <span class="type">ServerSocketChannel</span> <span class="variable">listenerChannel</span> <span class="operator">=</span> ServerSocketChannel.open();</span><br><span class="line">        listenerChannel.socket().bind(<span class="keyword">new</span> <span class="title class_">InetSocketAddress</span>(<span class="number">3333</span>));</span><br><span class="line">        listenerChannel.configureBlocking(<span class="literal">false</span>);</span><br><span class="line">        listenerChannel.register(serverSelector, SelectionKey.OP_ACCEPT);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">          <span class="comment">// 监测是否有新的连接，这里的1指的是阻塞的时间为 1ms</span></span><br><span class="line">          <span class="keyword">if</span> (serverSelector.select(<span class="number">1</span>) &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            Set&lt;SelectionKey&gt; set = serverSelector.selectedKeys();</span><br><span class="line">            Iterator&lt;SelectionKey&gt; keyIterator = set.iterator();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (keyIterator.hasNext()) &#123;</span><br><span class="line">              <span class="type">SelectionKey</span> <span class="variable">key</span> <span class="operator">=</span> keyIterator.next();</span><br><span class="line"></span><br><span class="line">              <span class="keyword">if</span> (key.isAcceptable()) &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                  <span class="comment">// (1) 每来一个新连接，不需要创建一个线程，而是直接注册到clientSelector</span></span><br><span class="line">                  <span class="type">SocketChannel</span> <span class="variable">clientChannel</span> <span class="operator">=</span> ((ServerSocketChannel) key.channel()).accept();</span><br><span class="line">                  clientChannel.configureBlocking(<span class="literal">false</span>);</span><br><span class="line">                  clientChannel.register(clientSelector, SelectionKey.OP_READ);</span><br><span class="line">                &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">                  keyIterator.remove();</span><br><span class="line">                &#125;</span><br><span class="line">              &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125; <span class="keyword">catch</span> (IOException ignored) &#123;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;).start();</span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Thread</span>(() -&gt; &#123;</span><br><span class="line">      <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">          <span class="comment">// (2) 批量轮询是否有哪些连接有数据可读，这里的1指的是阻塞的时间为 1ms</span></span><br><span class="line">          <span class="keyword">if</span> (clientSelector.select(<span class="number">1</span>) &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            Set&lt;SelectionKey&gt; set = clientSelector.selectedKeys();</span><br><span class="line">            Iterator&lt;SelectionKey&gt; keyIterator = set.iterator();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (keyIterator.hasNext()) &#123;</span><br><span class="line">              <span class="type">SelectionKey</span> <span class="variable">key</span> <span class="operator">=</span> keyIterator.next();</span><br><span class="line"></span><br><span class="line">              <span class="keyword">if</span> (key.isReadable()) &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                  <span class="type">SocketChannel</span> <span class="variable">clientChannel</span> <span class="operator">=</span> (SocketChannel) key.channel();</span><br><span class="line">                  <span class="type">ByteBuffer</span> <span class="variable">byteBuffer</span> <span class="operator">=</span> ByteBuffer.allocate(<span class="number">1024</span>);</span><br><span class="line">                  <span class="comment">// (3) 面向 Buffer</span></span><br><span class="line">                  clientChannel.read(byteBuffer);</span><br><span class="line">                  byteBuffer.flip();</span><br><span class="line">                  System.out.println(</span><br><span class="line">                      Charset.defaultCharset().newDecoder().decode(byteBuffer).toString());</span><br><span class="line">                &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">                  keyIterator.remove();</span><br><span class="line">                  key.interestOps(SelectionKey.OP_READ);</span><br><span class="line">                &#125;</span><br><span class="line">              &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125; <span class="keyword">catch</span> (IOException ignored) &#123;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;).start();</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="服务端-1"><a href="#服务端-1" class="headerlink" title="服务端"></a>服务端</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * </span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> 闪电侠</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2019年2月21日</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@Description</span>: NIO 改造后的服务端</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">NIOServer</span> &#123;<br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException &#123;<br>    <span class="hljs-comment">// 1. serverSelector负责轮询是否有新的连接，服务端监测到新的连接之后，不再创建一个新的线程，</span><br>    <span class="hljs-comment">// 而是直接将新连接绑定到clientSelector上，这样就不用 IO 模型中 1w 个 while 循环在死等</span><br>    <span class="hljs-type">Selector</span> <span class="hljs-variable">serverSelector</span> <span class="hljs-operator">=</span> Selector.open();<br>    <span class="hljs-comment">// 2. clientSelector负责轮询连接是否有数据可读</span><br>    <span class="hljs-type">Selector</span> <span class="hljs-variable">clientSelector</span> <span class="hljs-operator">=</span> Selector.open();<br><br>    <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(() -&gt; &#123;<br>      <span class="hljs-keyword">try</span> &#123;<br>        <span class="hljs-comment">// 对应IO编程中服务端启动</span><br>        <span class="hljs-type">ServerSocketChannel</span> <span class="hljs-variable">listenerChannel</span> <span class="hljs-operator">=</span> ServerSocketChannel.open();<br>        listenerChannel.socket().bind(<span class="hljs-keyword">new</span> <span class="hljs-title class_">InetSocketAddress</span>(<span class="hljs-number">3333</span>));<br>        listenerChannel.configureBlocking(<span class="hljs-literal">false</span>);<br>        listenerChannel.register(serverSelector, SelectionKey.OP_ACCEPT);<br><br>        <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) &#123;<br>          <span class="hljs-comment">// 监测是否有新的连接，这里的1指的是阻塞的时间为 1ms</span><br>          <span class="hljs-keyword">if</span> (serverSelector.select(<span class="hljs-number">1</span>) &gt; <span class="hljs-number">0</span>) &#123;<br>            Set&lt;SelectionKey&gt; set = serverSelector.selectedKeys();<br>            Iterator&lt;SelectionKey&gt; keyIterator = set.iterator();<br><br>            <span class="hljs-keyword">while</span> (keyIterator.hasNext()) &#123;<br>              <span class="hljs-type">SelectionKey</span> <span class="hljs-variable">key</span> <span class="hljs-operator">=</span> keyIterator.next();<br><br>              <span class="hljs-keyword">if</span> (key.isAcceptable()) &#123;<br>                <span class="hljs-keyword">try</span> &#123;<br>                  <span class="hljs-comment">// (1) 每来一个新连接，不需要创建一个线程，而是直接注册到clientSelector</span><br>                  <span class="hljs-type">SocketChannel</span> <span class="hljs-variable">clientChannel</span> <span class="hljs-operator">=</span> ((ServerSocketChannel) key.channel()).accept();<br>                  clientChannel.configureBlocking(<span class="hljs-literal">false</span>);<br>                  clientChannel.register(clientSelector, SelectionKey.OP_READ);<br>                &#125; <span class="hljs-keyword">finally</span> &#123;<br>                  keyIterator.remove();<br>                &#125;<br>              &#125;<br><br>            &#125;<br>          &#125;<br>        &#125;<br>      &#125; <span class="hljs-keyword">catch</span> (IOException ignored) &#123;<br>      &#125;<br>    &#125;).start();<br>    <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(() -&gt; &#123;<br>      <span class="hljs-keyword">try</span> &#123;<br>        <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) &#123;<br>          <span class="hljs-comment">// (2) 批量轮询是否有哪些连接有数据可读，这里的1指的是阻塞的时间为 1ms</span><br>          <span class="hljs-keyword">if</span> (clientSelector.select(<span class="hljs-number">1</span>) &gt; <span class="hljs-number">0</span>) &#123;<br>            Set&lt;SelectionKey&gt; set = clientSelector.selectedKeys();<br>            Iterator&lt;SelectionKey&gt; keyIterator = set.iterator();<br><br>            <span class="hljs-keyword">while</span> (keyIterator.hasNext()) &#123;<br>              <span class="hljs-type">SelectionKey</span> <span class="hljs-variable">key</span> <span class="hljs-operator">=</span> keyIterator.next();<br><br>              <span class="hljs-keyword">if</span> (key.isReadable()) &#123;<br>                <span class="hljs-keyword">try</span> &#123;<br>                  <span class="hljs-type">SocketChannel</span> <span class="hljs-variable">clientChannel</span> <span class="hljs-operator">=</span> (SocketChannel) key.channel();<br>                  <span class="hljs-type">ByteBuffer</span> <span class="hljs-variable">byteBuffer</span> <span class="hljs-operator">=</span> ByteBuffer.allocate(<span class="hljs-number">1024</span>);<br>                  <span class="hljs-comment">// (3) 面向 Buffer</span><br>                  clientChannel.read(byteBuffer);<br>                  byteBuffer.flip();<br>                  System.out.println(<br>                      Charset.defaultCharset().newDecoder().decode(byteBuffer).toString());<br>                &#125; <span class="hljs-keyword">finally</span> &#123;<br>                  keyIterator.remove();<br>                  key.interestOps(SelectionKey.OP_READ);<br>                &#125;<br>              &#125;<br><br>            &#125;<br>          &#125;<br>        &#125;<br>      &#125; <span class="hljs-keyword">catch</span> (IOException ignored) &#123;<br>      &#125;<br>    &#125;).start();<br><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>为什么大家都不愿意用 JDK 原生 NIO 进行开发呢？从上面的代码中大家都可以看出来，是真的难用！除了编程复杂、编程模型难之外，它还有以下让人诟病的问题：</p>
 <ul>
@@ -382,77 +428,342 @@
 <p>AIO 是异步IO的缩写，虽然 NIO 在网络操作中，提供了非阻塞的方法，但是 NIO 的 IO 行为还是同步的。对于 NIO 来说，我们的业务线程是在 IO 操作准备好时，得到通知，接着就由这个线程自行进行 IO 操作，IO操作本身是同步的。（除了 AIO 其他的 IO 类型都是同步的，这一点可以从底层IO线程模型解释，推荐一篇文章：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=Mzg3MjA4MTExMw==&mid=2247484746&idx=1&sn=c0a7f9129d780786cabfcac0a8aa6bb7&source=41#wechat_redirect">《漫话：如何给女朋友解释什么是Linux的五种IO模型？》</a> ）</p>
 <p>查阅网上相关资料，我发现就目前来说 AIO 的应用还不是很广泛，Netty 之前也尝试使用过 AIO，不过又放弃了。</p>
 
-    </div>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
 
+<span class="category-chains">
+  
+  
     
-    
-    
-
-    <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/java/" rel="tag"># java</a>
-              <a href="/tags/io/" rel="tag"># io</a>
-          </div>
-
+      <span class="category-chain">
         
+  <a href="/categories/java/" class="category-chain-item">java</a>
+  
+  
 
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2022/07/23/hello-world/" rel="prev" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2022/07/25/test/" rel="next" title="Hello World">
-                  Hello World <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/java/">#java</a>
+      
+        <a href="/tags/io/">#io</a>
+      
+    </div>
+  
 </div>
 
 
+              
+  
 
-
-
-
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">JH</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>javaIO学习</div>
+      <div>http://example.com/2022/07/25/javaIO学习/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>JH</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年7月25日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
   </div>
 
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/07/25/%E7%99%BE%E5%BA%A61%E9%9D%A2/" title="百度一面总结">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">百度一面总结</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/23/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
     </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
   </footer>
 
+  <!-- Scripts -->
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
 
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
 
 
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
 
   
 
-
-
-
-
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
